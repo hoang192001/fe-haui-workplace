@@ -1,0 +1,226 @@
+.header {
+    height: 60px;
+    padding: 0 16px;
+    backface-visibility: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgb(47 49 54 / 10%);
+    left: 0;
+    min-height: 60px;
+    min-height: var(--header-height);
+    min-width: 1060px;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    position: fixed;
+    right: 0;
+    top: 0;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 99;
+
+    &__content {
+        height: 61px;
+        display: flex;
+    }
+
+    &__brand {
+        flex: 1 1;
+
+        .switch-workspace {
+            height: 100%;
+            max-width: 290px;
+            padding: 4px 8px;
+            border-radius: 8px;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            .content {
+                width: auto;
+                max-width: 224px;
+                height: 100%;
+                display: flex;
+                cursor: pointer;
+                padding: 4px 8px;
+                border-radius: 8px;
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: #f1f2f4;
+                }
+
+                .box-logo {
+                    width: 44px;
+                    height: 44px;
+                    margin-right: 12px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        // border-radius: 6px;
+                        object-fit: cover;
+                        font-size: 28px;
+                    }
+                }
+
+                .info {
+                    display: flex;
+                    flex-direction: column;
+                    -webkit-box-pack: center;
+                    justify-content: center;
+                    -webkit-box-flex: 1;
+                    flex-grow: 1;
+
+                    .workspace-name {
+                        font-weight: 600;
+                        font-size: 16px;
+                        display: inline-block;
+                        width: auto;
+                        max-width: 160px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        color: rgb(38, 40, 44);
+                    }
+
+                    .role {
+                        font-size: 14px;
+                        color: rgb(115, 118, 130);
+                        font-weight: normal;
+                        display: inline-block;
+                        max-width: 160px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+    }
+
+    &__menu {
+        background-color: #fff;
+        display: flex;
+        list-style-type: none;
+        margin-bottom: 0;
+        padding: 3px 0;
+
+        .icon {
+            margin: 0 5px;
+            padding: 12px 39px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background-color: #306cb4;
+                box-shadow: 0 14px 26px -12px rgba(85, 150, 230, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12),
+                    0 8px 10px -5px rgba(85, 150, 230, 0.2);
+                svg path {
+                    fill: #ffffff;
+                }
+            }
+
+            &.active {
+                background-color: #6ba4e9;
+                box-shadow: 0 14px 26px -12px rgba(85, 150, 230, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12),
+                    0 8px 10px -5px rgba(85, 150, 230, 0.2);
+                svg path {
+                    fill: #ffffff;
+                }
+            }
+        }
+    }
+
+    &__nav {
+        flex: 1 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .search-box__input {
+            display: flex;
+            -webkit-box-flex: 1;
+            flex-grow: 1;
+            border: none;
+            -webkit-box-align: center;
+            align-items: center;
+            padding: 8px;
+            background: rgb(241, 242, 244);
+            border-radius: 72px;
+
+            input {
+                display: flex;
+                -webkit-box-flex: 1;
+                flex-grow: 1;
+                border: none;
+                background: rgb(241, 242, 244);
+                padding: 2px 0px;
+                margin-left: 10px;
+                outline: none;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 20px;
+                text-decoration: none;
+                color: rgb(38, 40, 44);
+            }
+        }
+
+        .hide-mobile {
+            display: flex;
+            align-items: center;
+            .ant-scroll-number {
+                top: 9px;
+                right: 5px;
+            }
+            .icon-notification:hover {
+                path {
+                    transition: all 0.3s ease;
+                    fill: var(--color-white);
+                }
+
+                rect {
+                    transition: all 0.3s ease;
+                    fill: var(--color-menu-main);
+                }
+            }
+        }
+
+        .avatar-link {
+            cursor: pointer;
+            height: 40px;
+            margin-right: 4px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                background-color: var(--color-gray-cloud);
+                border-radius: 10px;
+
+                .icon-arrow {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .avatar {
+                border-radius: 50%;
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                object-fit: cover;
+            }
+
+            .icon-arrow {
+                color: #4d4d4d;
+                display: block;
+                overflow: hidden;
+                padding: 0 8px;
+                position: relative;
+                transition: all 0.5s ease;
+            }
+        }
+    }
+}

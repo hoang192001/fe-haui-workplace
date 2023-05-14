@@ -1,0 +1,13 @@
+{
+    "plugins": [
+        "@emotion",
+        [
+            "module-resolver",
+            {
+                "alias": {
+                    "~": "./src"
+                }
+            }
+        ]
+    ]
+}

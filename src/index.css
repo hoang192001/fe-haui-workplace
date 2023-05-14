@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-black: #1d1d1d;
+  --color-white: #ffffff;
+  --color-gray: #737682;
+  --color-gray-rain: #999;
+  --color-gray-cloud: #f3f3f3;
+  --color-gray-200: #cacaca;
+  --color-gray-100: #dddddd;
+  --color-blue: #112445;
+  --color-blue-blur: #0050b3;
+  --color-yellow: #ffbe00;
+  --color-menu-main: #6ba4e9;
+  --color-menu-main-hover: #306cb4;
+  --color-active: #31A24C;
+  --color-active-200: #73d13d;
+  --color-second: #41d6c3;
+  --color-active-message: #ddf3ff;
+  --color-danger: #e94040;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  line-height: 1.5;
+  background-color: #f3f3f3;
+  color: var(--color-black);
+  scroll-behavior: smooth;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  outline: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: auto;
+  color: inherit;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: var(--color-white);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-200);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-rain);
+}
+
+::-webkit-scrollbar:horizontal{
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb:horizontal{
+  height: 5px;
+  width: 5px;
+}
+
+/* @media only screen and (max-width: 600px) {
+  html {
+    background-color: var(--color-menu-main);
+    position: relative;
+    height: 100vh;
+  }
+  html::after {
+    content: 'Hiện tại chưa có hỗ trợ cho phiên bản mobile';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    color: white;
+    top: 50%;
+    left: 5%;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  body {
+    display: none;
+  }
+} */
